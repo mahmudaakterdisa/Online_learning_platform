@@ -1,0 +1,16 @@
+.catagories-container {}
+
+.catagories-container img {
+    height: 30vh;
+}
+
+.card-body {
+    color: black;
+    /* color: rgba(255, 54, 54, 0.88); */
+}
+
+.card-body:hover {
+    color: white;
+    background-color: rgba(255, 54, 54, 0.88);
+
+}

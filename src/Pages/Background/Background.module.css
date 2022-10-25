@@ -1,8 +1,24 @@
 .background {
-    background-image: url('https://img.freepik.com/free-photo/close-up-hand-writing-notebook-top-view_23-2148888824.jpg?w=996&t=st=1666660415~exp=1666661015~hmac=d2eec44f9ce20191cf36f670498050b26b557b1dd1bb1c1671e875b390476f0d');
+    /* background-image: url('https://img.freepik.com/free-photo/close-up-hand-writing-notebook-top-view_23-2148888824.jpg?w=996&t=st=1666660415~exp=1666661015~hmac=d2eec44f9ce20191cf36f670498050b26b557b1dd1bb1c1671e875b390476f0d'); */
+
+    background-image: url('https://img.freepik.com/free-photo/top-view-woman-working-computer-wooden-table_169016-17990.jpg?w=996&t=st=1666718889~exp=1666719489~hmac=50b1f23059381f6a2490488228c1afdd463dd3015b5cd48dee557b211a7c99f2');
 
     background-size: cover;
     min-width: 100%;
     min-height: 100vh;
     /* position: fixed; */
+}
+
+@media only screen and (max-width: 576px) {
+    .background {
+        /* background-image: url('https://img.freepik.com/free-photo/close-up-hand-writing-notebook-top-view_23-2148888824.jpg?w=996&t=st=1666660415~exp=1666661015~hmac=d2eec44f9ce20191cf36f670498050b26b557b1dd1bb1c1671e875b390476f0d'); */
+
+
+        background-size: cover;
+        min-width: 100%;
+        /* min-height: 100vh; */
+        /* position: fixed; */
+    }
+
+
 }
