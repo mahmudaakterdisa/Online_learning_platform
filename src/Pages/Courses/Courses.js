@@ -6,7 +6,7 @@ import './Courses.css'
 
 const Courses = () => {
     const getCourseData = useLoaderData()
-    console.log(getCourseData);
+
     return (
 
         <div className='courses-container'>

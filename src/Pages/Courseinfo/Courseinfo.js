@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import './Courseinfo.css'
 
 const Courseinfo = ({ courseinfo }) => {
-    console.log(courseinfo);
-    const { courseimg, coursename, } = courseinfo
+
+    const { courseimg, coursename, id } = courseinfo
 
     return (
         <div className='courseinfo-container'>
@@ -16,7 +16,10 @@ const Courseinfo = ({ courseinfo }) => {
                     <Card.Body>
                         <Card.Title>{coursename}</Card.Title>
 
-                        <Button variant="primary">Course Details</Button>
+                        <Link to={`/courseinfo/${id}`}>
+                            <Button variant="primary">Course Details</Button>
+                        </Link>
+
                     </Card.Body>
                 </Card>
 
