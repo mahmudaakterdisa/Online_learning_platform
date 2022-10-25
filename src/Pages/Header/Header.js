@@ -17,6 +17,8 @@ const Header = () => {
                 <div className='headerlinks'>
                     <Link to='/home'>Home</Link>
                     <Link to='courses'>Courses</Link>
+                    <Link to='faq'>FAQ</Link>
+                    <Link to='blogs'>Blog</Link>
                     <Link to='login'>Login</Link>
                     <Link to='register'>Register</Link>
                 </div>

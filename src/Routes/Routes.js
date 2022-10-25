@@ -17,6 +17,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'courses',
+                loader: () => fetch('https://tech-ademy-server.vercel.app/courses'),
                 element: <Courses></Courses>
             },
             {

@@ -10,6 +10,7 @@
 
 .website-name {
     margin-top: 2%;
+    margin-left: 2%;
 
 }
 
@@ -29,7 +30,7 @@
 }
 
 .headerlinks {
-    margin-left: 40%;
+    margin-left: 25%;
     margin-top: 2%;
     font-size: larger;
     font-weight: bold;
@@ -40,7 +41,7 @@
 
 .headerlinks a {
     color: white;
-    margin-left: 25%;
+    margin-left: 15%;
     text-decoration: none;
     /* border: 2px solid blue; */
     border-radius: 5px;

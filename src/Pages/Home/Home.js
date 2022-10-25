@@ -5,7 +5,7 @@ import './Home.css'
 
 const Home = () => {
     const getLoderData = useLoaderData();
-    console.log(getLoderData);
+    // console.log(getLoderData);
     return (
         <div className='home-container'>
             <div className='catagories-title'>

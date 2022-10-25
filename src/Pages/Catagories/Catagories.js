@@ -9,7 +9,7 @@ const Catagories = ({ catagory }) => {
         <div className='catagories-container'>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={catagoriesimg} />
-                <Card.Body className='card-body'>
+                <Card.Body className='card-container'>
                     <Card.Title className='card-title'>{catagoriestitle}</Card.Title>
                     {/* <Card.Text>
                         Some quick example text to build on the card title and make up the

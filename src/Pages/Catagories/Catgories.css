@@ -4,12 +4,12 @@
     height: 30vh;
 }
 
-.card-body {
+.card-container {
     color: black;
     /* color: rgba(255, 54, 54, 0.88); */
 }
 
-.card-body:hover {
+.card-container:hover {
     color: white;
     background-color: rgba(255, 54, 54, 0.88);
 
