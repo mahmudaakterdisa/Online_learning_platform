@@ -1,0 +1,8 @@
+.background {
+    background-image: url('https://img.freepik.com/free-photo/close-up-hand-writing-notebook-top-view_23-2148888824.jpg?w=996&t=st=1666660415~exp=1666661015~hmac=d2eec44f9ce20191cf36f670498050b26b557b1dd1bb1c1671e875b390476f0d');
+
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    /* position: fixed; */
+}

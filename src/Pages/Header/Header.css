@@ -1,0 +1,18 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    /* justify-content: space-around; */
+
+}
+
+.headerlinks {
+    margin-left: 30%;
+
+}
+
+.headerlinks a {
+    margin-left: 25%;
+    text-decoration: none;
+}
