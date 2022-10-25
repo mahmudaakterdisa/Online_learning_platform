@@ -1,5 +1,24 @@
 .courseinfo-container {}
 
+
+
 .right-container img {
     height: 30vh;
+}
+
+.courseinfo-container button {
+    border: 2px solid black;
+    /* border-radius: 34px;
+    font-size: larger;
+    font-weight: 600;  */
+    background-color: white;
+    color: black;
+
+}
+
+.courseinfo-container button:hover {
+
+    border: 2px solid black;
+    background-color: rgba(255, 54, 54, 0.88);
+    color: white;
 }

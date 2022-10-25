@@ -17,7 +17,7 @@ const Courseinfo = ({ courseinfo }) => {
                         <Card.Title>{coursename}</Card.Title>
 
                         <Link to={`/courseinfo/${id}`}>
-                            <Button variant="primary">Course Details</Button>
+                            <Button>Course Details</Button>
                         </Link>
 
                     </Card.Body>

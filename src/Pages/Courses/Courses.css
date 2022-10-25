@@ -1,6 +1,12 @@
+.courses-container {
+    width: 100%;
+    height: 100vh;
+}
+
 .courses-container h2 {
     text-align: center;
     margin: 10%;
+
 
 }
 

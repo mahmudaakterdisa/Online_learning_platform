@@ -1,0 +1,83 @@
+.courseDetails-container {
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 90%;
+    height: 65vh;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-bottom: 15%;
+
+    background-color: lightgray;
+
+
+    /* background-color: red; */
+    /* color: white; */
+}
+
+.coursename {
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+
+    margin: 2% 0;
+    /* background-color: rgba(255, 54, 54, 0.88); */
+}
+
+.allinfo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 0;
+
+
+}
+
+.allinfo-container span {
+    color: rgba(255, 54, 54, 0.88);
+}
+
+.instructor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.instructor img {
+    width: 30%;
+    height: 8vh;
+    border-radius: 25px;
+}
+
+.instructor p {
+    margin-left: 5%;
+}
+
+
+
+.button-container {
+    text-align: center;
+    /* border: 2px solid black; */
+    /* background-color: rgba(255, 54, 54, 0.88); */
+    margin-bottom: 10%;
+
+}
+
+.button-container button {
+    border: 2px solid black;
+    border-radius: 34px;
+    font-size: larger;
+    font-weight: 600;
+
+
+
+}
+
+.button-container button:hover {
+
+    border: 2px solid black;
+    background-color: rgba(255, 54, 54, 0.88);
+    color: white;
+}
