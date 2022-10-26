@@ -1,11 +1,11 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import './Checkoutdetails.css';
 
 const Checkout = () => {
     const checkoutdata = useLoaderData();
     console.log(checkoutdata);
-    const { coursename, instructorname, enrolledstudent, courseimg, price } = checkoutdata;
+    const { coursename, instructorname, enrolledstudent, courseimg, price, id } = checkoutdata;
     return (
         <div className="card w-96 bg-base-100 shadow-xl image-full checkout-container">
             <figure><img src={courseimg} alt="courseimg" /></figure>
@@ -14,7 +14,10 @@ const Checkout = () => {
                 <p><strong>InstructorName</strong>: {instructorname}</p>
                 <p><strong>Price</strong>: {price}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn">Buy Now</button>
+                    <Link to={`/chekoutdata/${id}`}>
+                        <button className="btn">Buy Now</button>
+                    </Link>
+
                 </div>
             </div>
         </div>
