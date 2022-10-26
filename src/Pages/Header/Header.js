@@ -4,8 +4,12 @@ import Home from '../Home/Home';
 import './Header.css'
 import classes from '../Background/Background.module.css'
 import { GrSwift, GrFirefox } from "react-icons/gr";
+import { useContext } from 'react';
+import Authprovider, { Authcontext } from '../Authprovider/Authprovider';
 
 const Header = () => {
+
+    const { user } = useContext(Authcontext);
     return (
         <div className={classes.background}>
             <div className='header-container'>
@@ -21,6 +25,7 @@ const Header = () => {
                     <Link to='blogs'>Blog</Link>
                     <Link to='login'>Login</Link>
                     <Link to='register'>Register</Link>
+                    <Link to=''>{user?.name}</Link>
                 </div>
             </div>
 
