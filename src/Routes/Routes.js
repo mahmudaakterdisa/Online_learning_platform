@@ -3,8 +3,11 @@ import Main from "../Layout/Main";
 import Checkout from "../Pages/Checkout/Checkout";
 import Coursedetails from "../Pages/Coursedetails/Coursedetails";
 import Courses from "../Pages/Courses/Courses";
+import Cregistration from "../Pages/Cregistration/Cregistration";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
+
+
 import Wellcome from "../Pages/Wellcomepage/Wellcome";
 
 export const router = createBrowserRouter([
@@ -26,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: 'Login',
                 element: <Login></Login>
+            },
+            {
+                path: 'register',
+                element: <Cregistration></Cregistration>
             },
             {
                 path: '/courseinfo/:courseId',
