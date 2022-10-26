@@ -1,18 +1,21 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import './Coursedetails.css'
 
 const Coursedetails = () => {
     const getDetailsdata = useLoaderData();
-    console.log(getDetailsdata);
-    const { coursename, overview, price, enrolledstudent, instructorimg, instructorname } = getDetailsdata;
+
+    const { coursename, overview, price, enrolledstudent, instructorimg, instructorname, id, courseimg } = getDetailsdata;
     return (
         <div className='courseDetails-container'>
+            <div>
+                <img src={courseimg} alt="" />
+            </div>
             <div className='coursename'>
                 <h2>{coursename}</h2>
             </div>
-            <div>
+            <div className='overview'>
                 <p>{overview}</p>
             </div>
             <div className='allinfo-container'>
@@ -25,7 +28,10 @@ const Coursedetails = () => {
                 <p> <strong>Price:</strong> <span>{price}</span> </p>
             </div>
             <div className='button-container'>
-                <button className='btn'>Buy Now</button>
+                <Link to={`/getDetailsdata/${id}`}>
+                    <button className='btn'>Get premium Access</button>
+                </Link>
+
             </div>
 
         </div>

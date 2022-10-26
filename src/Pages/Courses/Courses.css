@@ -10,6 +10,14 @@
 
 }
 
+.courses-container h3 {
+    text-align: center;
+    /* margin: 10%; */
+
+
+}
+
+
 
 .coursebody-container {
     display: grid;

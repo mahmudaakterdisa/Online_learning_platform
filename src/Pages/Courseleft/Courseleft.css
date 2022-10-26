@@ -1,0 +1,17 @@
+.left-container {}
+
+.left-container a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.left-container a:hover {
+    color: white;
+    text-decoration: solid;
+}
+
+.itemdiv:hover {
+    background-color: rgba(255, 54, 54, 0.88);
+
+}

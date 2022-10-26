@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
+import Checkout from "../Pages/Checkout/Checkout";
 import Coursedetails from "../Pages/Coursedetails/Coursedetails";
 import Courses from "../Pages/Courses/Courses";
 import Home from "../Pages/Home/Home";
@@ -38,6 +39,13 @@ export const router = createBrowserRouter([
                     return fetch(`https://tech-ademy-server.vercel.app/courses/${params.Id}`)
                 },
                 element: <Coursedetails></Coursedetails>
+            },
+            {
+                path: '/getDetailsdata/:id',
+                loader: async ({ params }) => {
+                    return fetch(`https://tech-ademy-server.vercel.app/courses/${params.id}`)
+                },
+                element: <Checkout></Checkout>
             },
 
         ]
