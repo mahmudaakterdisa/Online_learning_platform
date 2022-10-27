@@ -26,14 +26,15 @@ const Header = () => {
                     <h1><GrFirefox></GrFirefox> Tech-<span>Ademy</span></h1>
                     <p>Learn From The Best</p>
                 </div>
+
+
                 <div className='headerlinks'>
                     <div>
                         <Link to='/home'>Home</Link>
                         <Link to='courses'>Courses</Link>
                         <Link to='faq'>FAQ</Link>
                         <Link to='blogs'>Blog</Link>
-                        {/* <Link to='login'>Login</Link>
-                    <Link to='register'>Register</Link> */}
+
 
                     </div>
 
@@ -73,6 +74,8 @@ const Header = () => {
 
                     </div>
                 </div>
+
+
 
             </div>
 

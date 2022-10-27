@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import Generatepdf from '../Generatepdf/Generatepdf';
+
 import './Coursedetails.css'
 
 const Coursedetails = () => {
@@ -14,6 +16,10 @@ const Coursedetails = () => {
             </div>
             <div className='coursename'>
                 <h2>{coursename}</h2>
+            </div>
+            <div>
+                <Generatepdf></Generatepdf>
+
             </div>
             <div className='overview'>
                 <p>{overview}</p>

@@ -1,13 +1,17 @@
 import React from 'react';
 
 import { FaGoogle } from "react-icons/fa";
+import { GoMarkGithub } from "react-icons/go";
+
 import { useContext } from 'react';
 import { Authcontext } from '../Authprovider/Authprovider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import './Login.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Login = () => {
+    const [errortext, setErrortext] = useState('');
     const { providerLogin } = useContext(Authcontext);
     const { signIn } = useContext(Authcontext);
     const navigate = useNavigate();
@@ -17,8 +21,21 @@ const Login = () => {
 
     const googleProvider = new GoogleAuthProvider();
 
+    //for github
+    const githubprovider = new GithubAuthProvider();
 
+    const handlegithubeevent = (event) => {
+        event.preventDefault();
+        providerLogin(githubprovider)
+            .then(result => {
+                const user = result.user;
 
+                navigate(from, { replace: true })
+
+            })
+
+            .catch(error => console.error(error))
+    }
 
 
     //function is for google signIn
@@ -26,7 +43,8 @@ const Login = () => {
         providerLogin(googleProvider)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+
+                navigate(from, { replace: true })
 
             })
 
@@ -47,9 +65,14 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                setErrortext('');
                 navigate(from, { replace: true });
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+
+                console.error(error)
+                setErrortext(error.message);
+            })
     }
 
     return (
@@ -57,7 +80,7 @@ const Login = () => {
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Login now!</h1>
-
+                    <p className="py-6">{errortext}</p>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleSubmit} className="card-body">
@@ -83,6 +106,10 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6 googlebutton">
                             <button onClick={handlegoogleevent}><FaGoogle></FaGoogle>signIn with Google</button>
+
+                        </div>
+                        <div className="form-control mt-6 googlebutton">
+                            <button onClick={handlegithubeevent}><GoMarkGithub></GoMarkGithub>signIn with Github</button>
 
                         </div>
                     </form>

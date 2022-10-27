@@ -22,3 +22,12 @@
 
 
 }
+
+@media only screen and (max-width: 576px) {
+    .background {
+
+        background-image: url('https://img.freepik.com/free-photo/top-view-woman-working-computer-wooden-table_169016-17990.jpg?w=996&t=st=1666718889~exp=1666719489~hmac=50b1f23059381f6a2490488228c1afdd463dd3015b5cd48dee557b211a7c99f2');
+        background-size: cover;
+        margin: auto;
+    }
+}

@@ -5,6 +5,7 @@ import Checkout from "../Pages/Checkout/Checkout";
 import Coursedetails from "../Pages/Coursedetails/Coursedetails";
 import Courses from "../Pages/Courses/Courses";
 import Cregistration from "../Pages/Cregistration/Cregistration";
+import Generatepdf from "../Pages/Generatepdf/Generatepdf";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 
@@ -67,6 +68,19 @@ export const router = createBrowserRouter([
                     return fetch(`https://tech-ademy-server.vercel.app/courses/${params.checkoutid}`)
                 },
                 element: <Wellcome></Wellcome>
+            },
+            {
+                path: '/chekoutdata/:checkoutid',
+                loader: async ({ params }) => {
+                    return fetch(`https://tech-ademy-server.vercel.app/courses/${params.checkoutid}`)
+                },
+                element: <Generatepdf></Generatepdf>
+            },
+            {
+
+                path: '*',
+                element: <div><h1>page not found</h1></div>
+
             },
 
         ]
