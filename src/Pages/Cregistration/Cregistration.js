@@ -1,3 +1,4 @@
+import { updateProfile } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -6,7 +7,7 @@ import { Authcontext } from '../Authprovider/Authprovider';
 
 
 const Cregistration = () => {
-    const { createUser } = useContext(Authcontext);
+    const { createUser, updateUserName } = useContext(Authcontext);
 
     const handlesubmitform = (event) => {
         event.preventDefault();
@@ -22,10 +23,19 @@ const Cregistration = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                updateUserName(username)
+
             })
 
             .catch(error => console.error(error))
+
     }
+
+
+
+
+
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col ">
