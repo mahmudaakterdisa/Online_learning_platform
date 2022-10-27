@@ -7,17 +7,49 @@ import { GrSwift, GrFirefox } from "react-icons/gr";
 import { useContext } from 'react';
 import Authprovider, { Authcontext } from '../Authprovider/Authprovider';
 import { FaUserGraduate } from "react-icons/fa";
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { useState } from 'react';
 
 const Header = () => {
 
     const { user, logout } = useContext(Authcontext);
+    const [changemode, setChangemode] = useState({
+        color: 'white',
+        backgroundColor: 'black'
+    })
 
+    const [mode, setMode] = useState("Dark Mode");
     const handleLogOut = () => {
         logout()
             .then(() => { })
             .catch(error => console.error(error))
     }
+
+
+    const handlemode = () => {
+
+        if (changemode.color == 'white') {
+
+            setChangemode({
+                color: 'black',
+                backgroundColor: 'white'
+            })
+            setMode('Light-Mode')
+        }
+
+        else {
+
+            setChangemode({
+                color: 'white',
+                backgroundColor: 'black'
+            })
+            setMode('Dark Mode')
+        }
+
+    }
+
+
+
     return (
         <div className={classes.background}>
             <div className='header-container'>
@@ -72,6 +104,10 @@ const Header = () => {
                             : <FaUserGraduate></FaUserGraduate>
                         }
 
+                    </div>
+
+                    <div className='mode-button'>
+                        <Button onClick={handlemode}>{mode}</Button>
                     </div>
                 </div>
 

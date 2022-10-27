@@ -131,7 +131,23 @@
     color: rgba(255, 54, 54, 0.88);
 }
 
+.mode-button button {
+    border: 2px solid black;
+    border-radius: 34px;
+    /* font-size: larger;
+    font-weight: 600; */
+    background-color: white;
+    color: black;
+}
 
+
+
+.mode-button button:hover {
+
+    border: 2px solid black;
+    background-color: rgba(255, 54, 54, 0.88);
+    color: white;
+}
 
 
 @media only screen and (max-width: 576px) {
@@ -142,7 +158,7 @@
         align-items: center;
         justify-content: flex-start; */
 
-
+        /* margin-right: 10%; */
 
     }
 
@@ -190,7 +206,21 @@
         margin-left: 5%;
         font-weight: bold;
     }
+
+
+
+    .mode-button button {
+
+        display: none;
+
+    }
+
+
+
+
 }
+
+
 
 
 
@@ -251,5 +281,26 @@
         margin-left: 5%;
         font-weight: bold;
     }
+
+
+    .mode-button button {
+        border: 2px solid black;
+        border-radius: 34px;
+        /* font-size: larger;
+        font-weight: 600; */
+        background-color: white;
+        color: black;
+    }
+
+
+
+    .mode-button button:hover {
+
+        border: 2px solid black;
+        background-color: rgba(255, 54, 54, 0.88);
+        color: white;
+    }
+
+
 
 }
