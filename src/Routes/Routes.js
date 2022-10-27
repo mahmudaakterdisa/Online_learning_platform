@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
+import Blog from "../Pages/Blogs/Blog";
 import Checkout from "../Pages/Checkout/Checkout";
 import Coursedetails from "../Pages/Coursedetails/Coursedetails";
 import Courses from "../Pages/Courses/Courses";
@@ -9,6 +10,7 @@ import Login from "../Pages/Login/Login";
 
 
 import Wellcome from "../Pages/Wellcomepage/Wellcome";
+import Privateroute from "../Privateroute/Privateroute";
 
 export const router = createBrowserRouter([
 
@@ -35,6 +37,10 @@ export const router = createBrowserRouter([
                 element: <Cregistration></Cregistration>
             },
             {
+                path: 'blogs',
+                element: <Blog></Blog>
+            },
+            {
                 path: '/courseinfo/:courseId',
                 loader: async ({ params }) => {
                     return fetch(`https://tech-ademy-server.vercel.app/courses/${params.courseId}`)
@@ -53,7 +59,7 @@ export const router = createBrowserRouter([
                 loader: async ({ params }) => {
                     return fetch(`https://tech-ademy-server.vercel.app/courses/${params.id}`)
                 },
-                element: <Checkout></Checkout>
+                element: <Privateroute><Checkout></Checkout></Privateroute>
             },
             {
                 path: '/chekoutdata/:checkoutid',

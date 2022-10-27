@@ -1,4 +1,7 @@
-.catagories-container {}
+.catagories-container {
+    width: 100%;
+    height: 100%;
+}
 
 .catagories-container img {
     height: 30vh;
@@ -14,3 +17,38 @@
     background-color: rgba(255, 54, 54, 0.88);
 
 }
+
+@media only screen and (max-width: 576px) {
+
+    .catagories-container {
+
+        margin-bottom: 35%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .catagories-container {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 35%;
+    }
+
+    .catagories-container img {
+        height: 30vh;
+    }
+
+    .card-container {
+        color: black;
+        /* color: rgba(255, 54, 54, 0.88); */
+    }
+
+    .card-container:hover {
+        color: white;
+        background-color: rgba(255, 54, 54, 0.88);
+
+    }
+}
+
+@media only screen and (min-width: 992px) {}

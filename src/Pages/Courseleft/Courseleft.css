@@ -15,3 +15,11 @@
     background-color: rgba(255, 54, 54, 0.88);
 
 }
+
+
+@media only screen and (max-width: 576px) {}
+
+@media only screen and (min-width: 768px) {}
+
+
+@media only screen and (min-width: 992px) {}
